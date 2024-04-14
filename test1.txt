@@ -1,1 +1,16 @@
-create test1.txt
+import pandas as pd
+df=pd.read_csv (r"C:\Users\User\Downloads\titanic.csv" )
+df.isnull()
+df.isnull().sum()
+print(df.to_string())
+pd.options.display.max_rows = 9999
+
+df = pd.read_csv(r"C:\Users\User\Downloads\titanic.csv")
+
+print(df)
+print(df.head(6))
+print(df.tail())
+new_df=df.dropna()
+df.dropna(inplace = True)
+print(new_df)
+print(df.to_string())
