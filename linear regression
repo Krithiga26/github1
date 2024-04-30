@@ -1,0 +1,14 @@
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import numpy as np
+X= np.array([33,86,52,88,68,38,56,87,94,78,45,85,86]).reshape(-1,1)
+y= np.array([5,7,8,7,2,17,2,9,4,11,12,9,6]).reshape(-1,1)
+reg=LinearRegression()
+reg.fit(X,y)
+y_pred=reg.predict(X)
+plt.scatter(X,y,color='black')
+plt.scatter(X,y_pred,color='red')
+plt.xlabel("unemployment rate")
+plt.ylabel("stock market gains")
+plt.title("unemployment rate with gains in stock market")
+plt.show()
